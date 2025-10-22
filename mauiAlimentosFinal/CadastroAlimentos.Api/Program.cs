@@ -1,0 +1,44 @@
+using CadastroAlimentos.Api.Data;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// --- Início da Configuração ---
+
+// 1. Pegue a senha do banco
+// Lembre-se que o "Server" agora é o nome do contêiner,
+// pois eles estão na mesma rede Docker (alimentos-net).
+var password = "TesteForte!123"; // <<< COLOQUE SUA SENHA DO BANCO
+
+var connectionString = $"Server=mssql-dev,1433;Database=CadastroAlimentosDB;User ID=sa;Password={password};TrustServerCertificate=True;";
+
+// 2. Configure o DbContext (como na etapa que corrigiu o log)
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+// 3. ADICIONE ESTA LINHA (ESTAVA FALTANDO)
+// Isso registra os serviços necessários para os Controllers
+builder.Services.AddControllers();
+
+// --- Fim da Configuração ---
+
+// Adiciona serviços padrões da API
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure o pipeline de HTTP (a ordem importa)
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+// 4. ADICIONE ESTA LINHA (ESTAVA FALTANDO)
+// Isso mapeia as rotas para os seus [ApiController] (como o AlimentosController)
+app.MapControllers();
+
+app.Run();
