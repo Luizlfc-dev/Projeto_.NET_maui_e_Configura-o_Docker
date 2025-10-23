@@ -105,7 +105,7 @@ Esta é a principal configuração manual.
     ```
 3.  Execute o Docker Compose:
     ```bash
-    docker-compose up --build -d
+    docker compose up --build -d
     ```
     * `--build`: Garante que a imagem da API seja (re)construída se o código mudou.
     * `-d`: Roda em segundo plano (detached).

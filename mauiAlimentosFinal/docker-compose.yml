@@ -1,28 +1,22 @@
-version: '3.8'
-
 services:
   # --- SERVIÇO 1: O BANCO DE DADOS ---
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: mssql-dev
-    
     # Lê os segredos do arquivo .env
     env_file:
       - .env
-    
     ports:
       - "1433:1433"
     networks:
       - alimentos-net
-    
     # Adiciona uma verificação de saúde (espera o banco estar "pronto")
-    healthcheck:
-      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P \"${SA_PASSWORD}\" -Q \"SELECT 1\" || exit 1"]
-      interval: 10s
-      timeout: 10s
-      retries: 5
-      start_period: 10s
-
+    #healthcheck:
+      #test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P \"${SA_PASSWORD}\" -Q \"SELECT 1\" || exit 1"]
+      #interval: 10s
+      #timeout: 10s
+      #retries: 5
+      #start_period: 30s
   # --- SERVIÇO 2: A NOSSA API ---
   api:
     container_name: api-dev
@@ -30,8 +24,7 @@ services:
     # Constrói a API a partir do Dockerfile na pasta da API
     build:
       context: ./CadastroAlimentos.Api 
-      dockerfile: Dockerfile
-    
+      dockerfile: Dockerfile   
     # Lê os segredos do .env (para a API também saber a senha)
     env_file:
       - .env
@@ -40,12 +33,12 @@ services:
       - "8080:8080"
     networks:
       - alimentos-net
-      
+    environment: # <<< ADICIONE ESTA SEÇÃO
+      - ASPNETCORE_ENVIRONMENT=Development  
     # Faz a API esperar o banco estar "saudável" antes de iniciar
-    depends_on:
-      db:
-        condition: service_healthy
-
+    #depends_on:
+      #db:
+        #condition: service_healthy
 # Define a rede que os dois vão usar para se comunicar
 networks:
   alimentos-net:

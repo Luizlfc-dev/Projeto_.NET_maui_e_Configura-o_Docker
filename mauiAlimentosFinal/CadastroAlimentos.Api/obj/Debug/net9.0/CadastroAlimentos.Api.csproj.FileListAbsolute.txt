@@ -8,6 +8,7 @@ C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\CadastroAlimentos.Api.pdb
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\DotNetEnv.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Humanizer.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -46,6 +47,7 @@ C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Sprache.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\luizl\ProjetoMauiAlimentos\mauiAlimentosFinal\CadastroAlimentos.Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

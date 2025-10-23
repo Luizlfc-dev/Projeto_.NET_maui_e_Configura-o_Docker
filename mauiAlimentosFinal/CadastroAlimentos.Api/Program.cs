@@ -1,6 +1,5 @@
 using CadastroAlimentos.Api.Data;
 using Microsoft.EntityFrameworkCore;
-using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,13 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 // 1. Pegue a senha do banco
 // Lembre-se que o "Server" agora é o nome do contêiner,
 // pois eles estão na mesma rede Docker (alimentos-net).
+// Tenta carregar o arquivo .env localizado um diretório acima
 
 var password = builder.Configuration["SA_PASSWORD"];
 var database = builder.Configuration["DB_DATABASE"];
-var ID_BD = builder.Configuration["ID_BD"];
 var server = "mssql-dev"; // O nome do nosso serviço de banco (veja o compose)
 
-var connectionString = $"Server={server},1433;Database={database};User ID={ID_BD};Password={password};TrustServerCertificate=True;";
+var connectionString = $"Server={server},1433;Database={database};User ID=sa;Password={password};TrustServerCertificate=True;";
 
 // 2. Configure o DbContext (como na etapa que corrigiu o log)
 builder.Services.AddDbContext<AppDbContext>(options =>
