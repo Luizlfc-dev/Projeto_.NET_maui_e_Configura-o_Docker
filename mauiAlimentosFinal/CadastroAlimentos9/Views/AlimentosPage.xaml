@@ -4,9 +4,7 @@
              x:Class="CadastroAlimentos9.Views.AlimentosPage"
              Title="Cadastro de Alimentos">
 
-    <ContentPage.BindingContext>
-        <viewModels:AlimentosViewModel />
-    </ContentPage.BindingContext>
+   
 
     <VerticalStackLayout Padding="20" Spacing="10">
         <Label Text="Nome do Alimento:" />

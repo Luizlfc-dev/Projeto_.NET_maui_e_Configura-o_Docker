@@ -1,8 +1,11 @@
-namespace CadastroAlimentos9.Models;
+// Local: CadastroAlimentos9/Models/Alimento.cs
 
-public class Alimento
+namespace CadastroAlimentos9.Models
 {
-    public int Id { get; set; }
-    public string Nome { get; set; }
-    public double Calorias { get; set; }
+    public class Alimento
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public int Calorias { get; set; }
+    }
 }

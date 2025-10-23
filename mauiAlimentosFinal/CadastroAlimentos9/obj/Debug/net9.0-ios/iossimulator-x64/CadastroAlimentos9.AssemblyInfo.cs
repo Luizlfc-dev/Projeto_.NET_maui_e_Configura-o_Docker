@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadastroAlimentos9")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d9fd289bae2815c42046571f34822557f4d2eedc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadastroAlimentos9")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadastroAlimentos9")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
